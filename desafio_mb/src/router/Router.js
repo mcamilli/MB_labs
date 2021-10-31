@@ -5,11 +5,13 @@ import EventDetailsPage from "../pages/EventDetailsPage/EventDetailsPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import CartPage from "../pages/CartPage/CartPage"
+import Header from "../components/Header";
 
 
 const Router = () => {
     return (
       <BrowserRouter>
+        <Header/>
         <Switch>
           <Route exact path ="/">
               <EventListPage/>
