@@ -10,9 +10,9 @@ export const goToEventList = (history) => {
     history.push("/")
 }
 
-export const goToEventListDetails = (history) => {
+/* export const goToEventListDetails = (history) => {
     history.push(`/detalhes/${id}`)
-}
+} */
 
 export const goToCart = (history) => {
     history.push("/carrinho")
