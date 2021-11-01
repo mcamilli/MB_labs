@@ -9,13 +9,14 @@ import { BsFillCalendarFill, BsFillPinMapFill } from "react-icons/bs";
 const EventCard = (props) => {
   return (
     <Card sx={{ width: 450, margin: "20px" }}>
-      <CardActionArea>
+      <CardActionArea onClick={props.onClick}>
         <CardMedia
           component= {"img"}
           alt= {props.title}
           height={"150px"}
           image={props.image}
-          title={props.title}          
+          title={props.title}
+          id={props.id}                            
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" align={"center"}>
