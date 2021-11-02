@@ -1,41 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { CardContainer, ScreenContainer } from "./styled";
 import EventCard from "../../components/EventCard/EventCard"
 import { goToEventListDetails } from "../../router/coordinator";
 import { useHistory } from "react-router";
-import itens from "../../components/EventCard/EventItem";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import  {ProductContext}  from "../../components/ProductsList/ProductContext";
+
 
 
 const EventListPage = () => {
   const history = useHistory () 
-  const [events, setEvents] = useState ([])
-  
-    const onClickCard = (id) => {
-        goToEventListDetails(history, id)
-    } 
-     const eventList = itens.eventItem.map((item) => {
-      return(
-        <EventCard  
-        onClick = {() => onClickCard(item.id)}
-         image={item.image} 
-         title={item.title}
-          data={item.data} 
-          local={item.local} 
-          id={item.id} 
-          key={item.id}          
-          />
-      )
-    })  
-        useEffect (() => {
-          setEvents(eventList)
-        },[])
+  const context = useContext(ProductContext)
+  console.log (context.products)
 
+    const onClickCard = (id) => {
+      goToEventListDetails(history, id)
+      } 
+
+        const productList = context.map((product) => {
+            return (
+            <EventCard
+            onClick={ () => onClickCard(product.id)}
+            image={product.image} 
+            title={product.title}
+            data={product.data} 
+            local={product.local} 
+            id={product.id} 
+            key={product.id} 
+            />   
+            )
+        })
+ 
   return (
     <ScreenContainer>   
       <CardContainer>       
-        < SearchBar placeholder = "Buscar evento" data={itens.eventItem} /> 
-         {events}                     
+        < SearchBar placeholder = "Buscar evento" data={context}/>            
+         {productList}              
       </CardContainer> 
     </ScreenContainer>
   );

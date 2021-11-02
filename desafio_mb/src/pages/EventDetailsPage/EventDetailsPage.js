@@ -1,36 +1,36 @@
-import React from "react";
+import React, {useContext} from "react";
 import {useParams} from "react-router-dom"
 import EventCardDetails from "./styled";
-import itens from "../../components/EventCard/EventItem";
 import { CardContainer, ScreenContainer } from "../EventListPage/styled";
-import { useHistory } from "react-router";
+import  {ProductContext}  from "../../components/ProductsList/ProductContext";
+import { CartContext } from "../../components/CartContext/CartContext";
 
 
-const EventDetailsPage = () => {
-  const history = useHistory () 
+const EventDetailsPage = () => {  
+  const context = useContext(ProductContext)
+  const cart = useContext(CartContext)
   const id = useParams ()
-  console.log(id)
 
-  const onClickCart = (id) => {
-    console.log ("cliquei", id)
-    
+  const onClickCart = () => {
+    cart.addToCart(id)
   }
+  console.log (cart)
 
-  const itemDetail = itens.eventItem.map((item) => {
+  
+
+  const itemDetail = context.map((product) => {
     return (     
       <EventCardDetails
-        onClick = {() => onClickCart (item.id)}
-        image={item.image}
-        title={item.title}
-        data={item.data}
-        local={item.local}
-        id={item.id}
-        description={item.description}
-        key={item.id} />  
-  )
-      
-  })
- 
+        onClick = {() => onClickCart (product.id)}
+        image={product.image}
+        title={product.title}
+        data={product.data}
+        local={product.local}
+        id={product.id}
+        description={product.description}
+        key={product.id} />  
+    )      
+  }) 
   return (
     <ScreenContainer>   
     <CardContainer> 

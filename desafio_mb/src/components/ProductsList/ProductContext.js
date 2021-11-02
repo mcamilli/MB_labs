@@ -1,6 +1,9 @@
+import React, { useState, createContext } from "react";
 
-const itens = {
-        eventItem: [
+export const ProductContext = createContext ()
+
+const ProductProvider = ({children}) => {
+    const [products, setProducts] = useState ([
         {
             id: 1,
             image:"https://i.scdn.co/image/ab6761610000e5eba8be16a95c2cc4950cbaa8d8",
@@ -41,10 +44,12 @@ const itens = {
             local:"Araraquara",
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend."               
         }
-    ]
+    ])
+        return (
+            <ProductContext.Provider value ={products}>
+                {children}
+            </ProductContext.Provider>
+        )
 }
 
-
-export default itens
-
-
+export default ProductProvider
