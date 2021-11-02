@@ -16,7 +16,8 @@ const EventCard = (props) => {
           height={"150px"}
           image={props.image}
           title={props.title}
-          id={props.id}                            
+          id={props.id} 
+          description={props.description}                           
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" align={"center"}>
