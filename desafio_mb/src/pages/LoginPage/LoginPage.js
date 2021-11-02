@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
 import {goToSignup} from "../../router/coordinator"
 import {useHistory} from "react-router-dom"
+import Typography from '@mui/material/Typography';
 
 
 
@@ -19,7 +20,9 @@ const LoginPage = () => {
 
   return (
     <ScreenContainer>
-      <h1> Login page </h1>
+      <Typography margin = "10px" variant="h4" color="text.secondary" align={"center"}>
+       Login 
+       </Typography>
       <InputsContainer>
         <form onSubmit={onSubmitForm}>
         <TextField
@@ -50,7 +53,7 @@ const LoginPage = () => {
           fullWidth
           variant={"contained"}
           color ={"primary"}
-        > 
+        >         
         Fazer login 
         </Button>
         </form>

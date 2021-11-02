@@ -12,8 +12,8 @@ const SearchBar = ({placeholder, data}) => {
 
 const handleFilter = (event) => {
    const searchWord = event.target.value
-   const newFilter = data.filter((item) => {
-          return item.title.toLowerCase().includes(searchWord.toLowerCase())
+   const newFilter = data.filter((product) => {
+          return product.title.toLowerCase().includes(searchWord.toLowerCase())
          
    }) 
    setFilteredData(newFilter)
@@ -31,16 +31,16 @@ const onClickCard = (id) => {
             onChange ={handleFilter}  
             />
     <div>
-        {filteredData.map((item) => {
+        {filteredData.map((product) => {
             return (
                 <EventCard  
-                onClick = {() => onClickCard(item.id)} 
-                image={item.image} 
-                title={item.title} 
-                data={item.data} 
-                local={item.local} 
-                id={item.id} 
-                key={item.id}/>
+                onClick = {() => onClickCard(product.id)} 
+                image={product.image} 
+                title={product.title} 
+                data={product.data} 
+                local={product.local} 
+                id={product.id} 
+                key={product.id}/>
             )                  
         })}        
     </div>

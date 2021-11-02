@@ -7,8 +7,9 @@ import { goToEventList, goToLogin, goToCart } from '../router/coordinator';
 import {useHistory} from "react-router-dom"
 import { BsCart3 } from "react-icons/bs";
 
+
 const Header = () => {
-    const history = useHistory()
+        const history = useHistory()
     
   return (
     <Box sx={{ flexGrow: 1 }}>

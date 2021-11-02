@@ -1,16 +1,14 @@
 import React from "react";
-import { InputsContainer, ScreenContainer, SignUpButtonContainer } from "./styled";
+import { InputsContainer, ScreenContainer } from "./styled";
 import useForm from "../../hooks/useform"
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
-import {goToSignup} from "../../router/coordinator"
-import {useHistory} from "react-router-dom"
-
+import Typography from '@mui/material/Typography';
 
 
 const SignUpPage = () => {
   const [form, onChange, clear] = useForm({name: "", email:"", password:""})
-  const history = useHistory ()
+ 
 
   const onSubmitForm = (event) => {
       event.preventDefault ()
@@ -19,7 +17,9 @@ const SignUpPage = () => {
 
   return (
     <ScreenContainer>
-      <h1> Login page </h1>
+      <Typography margin = "10px" variant="h4" color="text.secondary" align={"center"}>
+       Cadastrar 
+      </Typography>
       <InputsContainer>
         <form onSubmit={onSubmitForm}>
         <TextField
