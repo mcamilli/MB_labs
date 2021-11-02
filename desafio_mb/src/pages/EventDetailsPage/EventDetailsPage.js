@@ -3,16 +3,21 @@ import {useParams} from "react-router-dom"
 import EventCardDetails from "./styled";
 import { CardContainer, ScreenContainer } from "../EventListPage/styled";
 import  {ProductContext}  from "../../components/ProductsList/ProductContext";
+import { CartContext } from "../../components/CartContext/CartContext";
 
 
 const EventDetailsPage = () => {  
-  const id = useParams ()  
   const context = useContext(ProductContext)
- 
-  const onClickCart = (id) => {
-      console.log ("cliquei", id)
+  const cart = useContext(CartContext)
+  const id = useParams ()
+
+  const onClickCart = () => {
+    cart.addToCart(id)
   }
+  console.log (cart)
+
   
+
   const itemDetail = context.map((product) => {
     return (     
       <EventCardDetails

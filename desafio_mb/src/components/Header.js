@@ -6,10 +6,13 @@ import { Button } from '@mui/material';
 import { goToEventList, goToLogin, goToCart } from '../router/coordinator';
 import {useHistory} from "react-router-dom"
 import { BsCart3 } from "react-icons/bs";
-
+import { CartContext } from "../components/CartContext/CartContext";
+import { useContext } from 'react';
 
 const Header = () => {
-        const history = useHistory()
+  const cart = useContext(CartContext)
+  const itensCount = Object.keys(cart.cart).length
+  const history = useHistory()
     
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -17,7 +20,7 @@ const Header = () => {
         <Toolbar>
             <Button onClick={() => goToEventList(history)} color ="inherit"> MB Ticket </Button>
             <Button onClick={() => goToLogin (history)} color ="inherit"> Login </Button>
-            <Button onClick={() => goToCart (history)} color ="inherit"> <BsCart3/> </Button>
+            <Button onClick={() => goToCart (history)} color ="inherit"> <BsCart3/> {itensCount > 0 && <span> ({itensCount}) </span> } </Button>
         </Toolbar>
       </AppBar>
     </Box>
