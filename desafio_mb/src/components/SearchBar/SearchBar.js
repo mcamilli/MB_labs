@@ -5,22 +5,23 @@ import {useHistory} from "react-router-dom"
 import { goToEventListDetails } from "../../router/coordinator"
 import { StyledInputBase } from "./styled"
 
+
 const SearchBar = ({placeholder, data}) => {
-    const [filteredData, setFilteredData] = useState([])
+    const [filteredData, setFilteredData] = useState([])    
     const history = useHistory ()
 
 const handleFilter = (event) => {
    const searchWord = event.target.value
    const newFilter = data.filter((item) => {
-       return item.title.includes(searchWord)
-   })
+          return item.title.toLowerCase().includes(searchWord.toLowerCase())
+         
+   }) 
    setFilteredData(newFilter)
 }
 
 const onClickCard = (id) => {
     goToEventListDetails(history, id)
 }
-
 
     return (
     <>
@@ -40,8 +41,8 @@ const onClickCard = (id) => {
                 local={item.local} 
                 id={item.id} 
                 key={item.id}/>
-            )
-        })}
+            )                  
+        })}        
     </div>
     </>
 )  

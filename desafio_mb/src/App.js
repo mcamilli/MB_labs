@@ -6,7 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-        <Router/>
+        <Router />
     </ThemeProvider>
   );
 }
