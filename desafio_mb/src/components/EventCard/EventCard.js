@@ -8,7 +8,7 @@ import { BsFillCalendarFill, BsFillPinMapFill } from "react-icons/bs";
 
 const EventCard = (props) => {
   return (
-    <Card sx={{ width: 450, margin: "20px" }}>
+    <Card sx={{ width: 400, margin: "20" }}>
       <CardActionArea onClick={props.onClick}>
         <CardMedia
           component= {"img"}

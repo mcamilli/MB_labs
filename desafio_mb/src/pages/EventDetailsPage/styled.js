@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 
 const EventCardDetails = (props) => {
   return (
-    <Card sx={{ width: 600, margin: "20px" }}>
+    <Card sx={{ width: 400, margin: "20px" }}>
       
         <CardMedia
           component= {"img"}
