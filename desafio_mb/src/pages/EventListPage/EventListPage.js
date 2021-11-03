@@ -13,14 +13,14 @@ const EventListPage = () => {
   const context = useContext(ProductContext)
   console.log (context.products)
 
-    const onClickCard = (id) => {
-      goToEventListDetails(history, id)
+    const onClickCard = (title) => {
+      goToEventListDetails(history, title)
       } 
 
         const productList = context.map((product) => {
             return (
             <EventCard
-            onClick={ () => onClickCard(product.id)}
+            onClick={ () => onClickCard(product.title)}
             image={product.image} 
             title={product.title}
             data={product.data} 
