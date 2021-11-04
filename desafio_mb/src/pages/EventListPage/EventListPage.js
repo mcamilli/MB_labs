@@ -23,7 +23,8 @@ const EventListPage = () => {
             onClick={ () => onClickCard(product.title)}
             image={product.image} 
             title={product.title}
-            data={product.data} 
+            data={product.data}
+            price={product.price} 
             local={product.local} 
             id={product.id} 
             key={product.id} 

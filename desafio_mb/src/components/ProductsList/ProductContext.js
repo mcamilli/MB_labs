@@ -10,6 +10,7 @@ const ProductProvider = ({children}) => {
             title:"Rammstein",
             data:"01/12/2021",
             local:"Morumbi", 
+            price:30,  
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend." 
         }, 
         {
@@ -17,7 +18,8 @@ const ProductProvider = ({children}) => {
             image:"https://townsquare.media/site/366/files/2014/09/Clutch.jpg?w=980&q=75",
             title:"Clutch",
             data:"02/12/2021",
-            local:"Campo de Marte",    
+            local:"Campo de Marte", 
+            price:20,   
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend."           
         },
         {
@@ -26,6 +28,7 @@ const ProductProvider = ({children}) => {
             title:"Bad Religion",
             data:"03/12/2021",
             local:"Allainz Parque ",
+            price:20,  
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend."               
         },
         {
@@ -34,6 +37,7 @@ const ProductProvider = ({children}) => {
             title:"InterBio",
             data:"10/07/2022",
             local:"Botucatu",
+            price:80,  
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend."              
         },
         {
@@ -42,6 +46,7 @@ const ProductProvider = ({children}) => {
             title:"InterUnesp",
             data:"12/11/2021",
             local:"Araraquara",
+            price:10,  
             description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum ac leo at varius. Quisque non ante mi. Nulla et est malesuada, imperdiet tortor sed, egestas enim. Nam ut dolor massa. Proin ut quam imperdiet, auctor nibh in, vestibulum mi. Suspendisse molestie purus at lacus ullamcorper, et placerat metus eleifend. Aliquam auctor vestibulum metus vel laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dictum, turpis id iaculis ornare, tellus ligula luctus nibh, id consequat nulla est eu mauris. In fermentum egestas aliquet. Suspendisse lobortis ex ac ex interdum tincidunt. Nunc quis lectus at magna euismod condimentum quis non enim. Praesent orci quam, laoreet vel semper non, tincidunt et tellus. Curabitur gravida urna id enim imperdiet, ac viverra orci bibendum. Nulla nec mauris ut est euismod eleifend."               
         }
     ])

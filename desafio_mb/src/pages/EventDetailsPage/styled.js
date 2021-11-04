@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { BsFillCalendarFill, BsFillPinMapFill } from "react-icons/bs";
+import { BsFillCalendarFill, BsFillPinMapFill, BsCoin } from "react-icons/bs";
 import { Button } from '@mui/material';
 
 const EventCardDetails = (props) => {
@@ -26,6 +26,8 @@ const EventCardDetails = (props) => {
             <BsFillCalendarFill/> {props.data} 
             <br/>           
             <BsFillPinMapFill/> {props.local}
+            <br/>            
+            <BsCoin/> {props.price}
             <br/>
             <Typography gutterBottom variant="p" component="div" align={"center"}>
             Detalhes

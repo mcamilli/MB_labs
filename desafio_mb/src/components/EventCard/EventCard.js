@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import { BsFillCalendarFill, BsFillPinMapFill } from "react-icons/bs";
+import { BsFillCalendarFill, BsFillPinMapFill, BsCoin } from "react-icons/bs";
 
 const EventCard = (props) => {
   return (
@@ -16,6 +16,7 @@ const EventCard = (props) => {
           height={"150px"}
           image={props.image}
           title={props.title}
+          price={props.price} 
           id={props.id} 
           description={props.description}                           
         />
@@ -27,6 +28,9 @@ const EventCard = (props) => {
             <BsFillCalendarFill/> {props.data} 
             <br/>           
             <BsFillPinMapFill/> {props.local}
+            <br/>
+            <BsCoin/> {props.price}
+
           </Typography>
           </CardContent>
       </CardActionArea>
