@@ -11,20 +11,16 @@ const EventDetailsPage = () => {
   const cart = useContext(CartContext)
   const title = useParams ()
 
-  console.log(context)
-  console.log (title)
   const onClickCart = () => {
-    cart.addToCart(title)
+    cart.addToCart(filteredProduct)
   }
-  console.log (cart)
-
   const filteredProduct = context.filter((p => p.title === title.title))
-  console.log ("filtered",filteredProduct)
+  console.log ("cart",cart)
 
   const itemDetail = filteredProduct.map((product) => {
     return (     
       <EventCardDetails
-        onClick = {() => onClickCart (product.title)}
+        onClick = {() => onClickCart ()}
         image={product.image}
         title={product.title}
         data={product.data}

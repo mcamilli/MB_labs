@@ -19,8 +19,8 @@ const handleFilter = (event) => {
    setFilteredData(newFilter)
 }
 
-const onClickCard = (id) => {
-    goToEventListDetails(history, id)
+const onClickCard = (title) => {
+    goToEventListDetails(history, title)
 }
 
     return (
@@ -34,7 +34,7 @@ const onClickCard = (id) => {
         {filteredData.map((product) => {
             return (
                 <EventCard  
-                onClick = {() => onClickCard(product.id)} 
+                onClick = {() => onClickCard(product.title)} 
                 image={product.image} 
                 title={product.title} 
                 data={product.data} 
