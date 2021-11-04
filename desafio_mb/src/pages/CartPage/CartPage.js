@@ -3,14 +3,14 @@ import { CartContext } from "../../components/CartContext/CartContext";
 import { CardContainer, ScreenContainer } from "../EventListPage/styled";
 import CartCard from "./CartCard";
 import { Button } from '@mui/material';
+import { goToLogin } from '../../router/coordinator'
+import { useHistory } from "react-router";
 
 const CartPage = () => {
  const {cart} = useContext(CartContext)  
-console.log ("cart", cart)
+ const history = useHistory ()
 
-
-const cartProducts = cart.map ((cartProduct) => {  
-  console.log ("isso é umcartproduc", cartProduct[0])
+const cartProducts = cart.map ((cartProduct) => {   
   return (
      <CartCard
       title={cartProduct[0].title}
@@ -21,12 +21,11 @@ const cartProducts = cart.map ((cartProduct) => {
   )
 })
 
-
   return (
     <ScreenContainer>
       <CardContainer>
       {cartProducts}
-      <Button> Finalizar compra</Button>
+      <Button onClick ={ () => {goToLogin (history)}}> Finalizar compra</Button>
       </CardContainer>
     </ScreenContainer>
   );

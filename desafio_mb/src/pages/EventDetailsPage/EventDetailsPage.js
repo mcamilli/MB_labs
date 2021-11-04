@@ -4,16 +4,23 @@ import EventCardDetails from "./styled";
 import { CardContainer, ScreenContainer } from "../EventListPage/styled";
 import  {ProductContext}  from "../../components/ProductsList/ProductContext";
 import { CartContext } from "../../components/CartContext/CartContext";
-
+import { useHistory } from "react-router";
+import { Button } from "@mui/material";
 
 const EventDetailsPage = () => {  
   const context = useContext(ProductContext)
   const {cart, addToCart} = useContext(CartContext)
   const title = useParams ()
+  const history = useHistory ()
+
+  const goBack = () => {
+    history.goBack ()
+  }
 
   const onClickCart = () => {
     addToCart(filteredProduct)
   }
+
   const filteredProduct = context.filter((p => p.title === title.title))
 
   const itemDetail = filteredProduct.map((product) => {
@@ -34,6 +41,7 @@ const EventDetailsPage = () => {
     <ScreenContainer>   
     <CardContainer> 
     {itemDetail}
+    <Button onClick={goBack}>Voltar</Button>
     </CardContainer> 
     </ScreenContainer>   
     

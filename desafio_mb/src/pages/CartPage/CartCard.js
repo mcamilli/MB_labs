@@ -6,7 +6,6 @@ import { BsFillCalendarFill, BsFillPinMapFill, BsCoin } from "react-icons/bs";
 
 
 const CartCard = (props) => {
-  console.log("isso é uma props", props)
   return (
     <Card sx={{ width: 250, margin: "20px" }}>      
         <CardContent>

@@ -15,7 +15,8 @@ const LoginPage = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault ()
-    console.log (form)      
+    console.log (form)  
+    clear ()       
   }
 
   return (

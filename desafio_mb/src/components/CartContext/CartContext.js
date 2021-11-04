@@ -10,7 +10,8 @@ export const CartProvider = ({children}) => {
         setCart ([...cart, product])
         window.localStorage.setItem('cart', JSON.stringify(cart))
     }  
-        
+
+    
  return (
      <CartContext.Provider value ={{cart, addToCart}}>
          {children}
