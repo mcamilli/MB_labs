@@ -11,7 +11,7 @@ import { useContext } from 'react';
 
 const Header = () => {
   const cart = useContext(CartContext)
-  const itensCount = Object.keys(cart.cart).length
+  const itensCount = cart.cart.length
   const history = useHistory()
     
   return (

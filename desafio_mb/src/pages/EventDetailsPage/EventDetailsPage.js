@@ -8,14 +8,13 @@ import { CartContext } from "../../components/CartContext/CartContext";
 
 const EventDetailsPage = () => {  
   const context = useContext(ProductContext)
-  const cart = useContext(CartContext)
+  const {cart, addToCart} = useContext(CartContext)
   const title = useParams ()
 
   const onClickCart = () => {
-    cart.addToCart(filteredProduct)
+    addToCart(filteredProduct)
   }
   const filteredProduct = context.filter((p => p.title === title.title))
-  console.log ("cart",cart)
 
   const itemDetail = filteredProduct.map((product) => {
     return (     
@@ -26,6 +25,7 @@ const EventDetailsPage = () => {
         data={product.data}
         local={product.local}
         id={product.id}
+        price={product.price} 
         description={product.description}
         key={product.id} />  
     )      
