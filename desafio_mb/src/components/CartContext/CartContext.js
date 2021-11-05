@@ -8,9 +8,9 @@ export const CartProvider = ({children}) => {
 
     const addToCart = (product)=> {
         setCart ([...cart, product])
-        window.localStorage.setItem('cart', JSON.stringify(cart))
-    }  
-        
+     }  
+
+    
  return (
      <CartContext.Provider value ={{cart, addToCart}}>
          {children}
