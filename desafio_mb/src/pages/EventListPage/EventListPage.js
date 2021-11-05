@@ -11,8 +11,7 @@ import  {ProductContext}  from "../../components/ProductsList/ProductContext";
 const EventListPage = () => {
   const history = useHistory () 
   const context = useContext(ProductContext)
-  console.log (context.products)
-
+  
     const onClickCard = (title) => {
       goToEventListDetails(history, title)
       } 

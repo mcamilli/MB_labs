@@ -10,7 +10,7 @@ import useProtectedPage from "../../hooks/useProtectedPage"
 
 const EventDetailsPage = () => {  
   const context = useContext(ProductContext)
-  const {cart, addToCart} = useContext(CartContext)
+  const {addToCart} = useContext(CartContext)
   const title = useParams ()
   const history = useHistory ()
   useProtectedPage ()

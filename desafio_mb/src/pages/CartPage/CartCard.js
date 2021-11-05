@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { BsFillCalendarFill, BsFillPinMapFill, BsCoin } from "react-icons/bs";
+import { Button } from '@mui/material';
 
 
 const CartCard = (props) => {
@@ -18,6 +19,8 @@ const CartCard = (props) => {
             <BsFillPinMapFill/> {props.local}
             <br/>
             <BsCoin/> {props.price}
+            <br/>
+            <Button onClick={props.onClick}> Remover</Button>
             </Typography>             
            </CardContent>      
           </Card>
