@@ -5,10 +5,12 @@ import CartCard from "./CartCard";
 import { Button } from '@mui/material';
 import { goToLogin } from '../../router/coordinator'
 import { useHistory } from "react-router";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const CartPage = () => {
  const {cart} = useContext(CartContext)  
  const history = useHistory ()
+ useProtectedPage ()
 
 const cartProducts = cart.map ((cartProduct) => {   
   return (

@@ -7,15 +7,17 @@ import { CartProvider } from "./components/CartContext/CartContext";
 
 
 
+
+
 const App = () => {
-  return (    
+  return (       
     <ThemeProvider theme={theme}>
     <CartProvider>
     <ProductProvider>
-        <Router />
+      <Router />      
     </ProductProvider>
     </CartProvider>
-    </ThemeProvider>       
+    </ThemeProvider>          
   );
 }
 

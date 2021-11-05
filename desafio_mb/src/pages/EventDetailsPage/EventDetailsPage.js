@@ -6,12 +6,14 @@ import  {ProductContext}  from "../../components/ProductsList/ProductContext";
 import { CartContext } from "../../components/CartContext/CartContext";
 import { useHistory } from "react-router";
 import { Button } from "@mui/material";
+import useProtectedPage from "../../hooks/useProtectedPage"
 
 const EventDetailsPage = () => {  
   const context = useContext(ProductContext)
   const {cart, addToCart} = useContext(CartContext)
   const title = useParams ()
   const history = useHistory ()
+  useProtectedPage ()
 
   const goBack = () => {
     history.goBack ()

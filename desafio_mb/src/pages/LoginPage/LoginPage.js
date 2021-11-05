@@ -3,7 +3,7 @@ import { InputsContainer, ScreenContainer, SignUpButtonContainer } from "./style
 import useForm from "../../hooks/useform"
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
-import {goToSignup} from "../../router/coordinator"
+import {goToEventList, goToSignup} from "../../router/coordinator"
 import {useHistory} from "react-router-dom"
 import Typography from '@mui/material/Typography';
 
@@ -14,10 +14,23 @@ const LoginPage = () => {
   const history = useHistory ()
 
   const onSubmitForm = (event) => {
-    event.preventDefault ()
-    console.log (form)  
-    clear ()       
+    event.preventDefault ()    
+    clear () 
+    login ()     
   }
+  console.log (form.email, form.password)  
+
+  const login = () => {
+    if (form.email === "admin@email.com" && form.password === "1234"){
+      return (
+        localStorage.setItem("token", 1234),
+        goToEventList(history)
+      )
+    }else {
+      return alert("Usuário ou senha inválido")
+    }
+  }
+
 
   return (
     <ScreenContainer>
@@ -72,6 +85,6 @@ const LoginPage = () => {
         </SignUpButtonContainer>
     </ScreenContainer>
   );
-}
+  }
 
 export default LoginPage;

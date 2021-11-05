@@ -8,8 +8,7 @@ export const CartProvider = ({children}) => {
 
     const addToCart = (product)=> {
         setCart ([...cart, product])
-        window.localStorage.setItem('cart', JSON.stringify(cart))
-    }  
+     }  
 
     
  return (
